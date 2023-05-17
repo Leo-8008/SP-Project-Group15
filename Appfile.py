@@ -50,7 +50,7 @@ def plot_corr(group_name, stocks, conn):
 
 
 def download_data(stocks, conn):
-    data = yf.download(stocks, start="2020-01-01", end="2023-04-29")
+    data = yf.download(stocks, start="2020-01-01", end="2023-04-30")
     closing_prices = data['Close']
     closing_prices.to_sql('closing_prices', conn, if_exists='replace')
 
